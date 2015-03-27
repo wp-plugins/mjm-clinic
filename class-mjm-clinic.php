@@ -24,7 +24,7 @@ class MJM_Clinic {
 	 *
 	 * @var     string
 	 */
-	protected $version = '1.0.9';
+	protected $version = '1.0.10';
 
 	/**
 	 * Unique identifier for your plugin.
@@ -333,7 +333,6 @@ class MJM_Clinic {
 			'public' => true,
 			'show_ui' => true,
             'show_in_menu' => true,
-			'menu_position' => 25,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
