@@ -197,6 +197,17 @@ function mjm_clinic_get_condition_assigned_services($condition_post, $limit = -1
     return $posts;
 }
 
+function mjm_clinic_get_staff_assigned_services($staff_post, $limit = -1){
+	$service_id_array = explode(',',$staff_post->mjm_clinic_recommended_service_selected_ids);
+	$posts = get_posts(
+		array(
+			'post__in' => $service_id_array,
+			'post_type' => 'mjm-clinic-service',
+			'posts_per_page' => $limit
+		)
+	);
+	return $posts;
+}
 
 
 function mjm_clinic_get_service_list(){
@@ -443,5 +454,4 @@ function mjm_clinic_get_post_related_posts($post, $get_post_type, $taxonomy, $li
    return mjm_clinic_get_posts_related_to_terms($get_post_type, $taxonomy, $terms, $limit, array($post->id));
 
 }
-?>
 
