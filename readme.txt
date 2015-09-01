@@ -94,6 +94,10 @@ Outputs a presentation of categories and services. Use this on your services pag
 Attribute values:
      *  - category : slug or term_ID , optional parent , if none given the top level category/services will be shown.
 
+`[mjm-clinic-disclaimer]`
+Outputs the disclaimer text, editable in the settings admin area. Uses overidable template 'shortcode-disclaimer
+.php'
+
 = Helper Functions =
 There are a number of helper functions that can be used in your theme, which are found in `inc/func.php`.
 
@@ -208,10 +212,15 @@ None
 * removed `menu_position` on clinic menu entry, to avoid possible conflicts with other plugins
 
 = 1.0.11 =
-* fixed service location map widget output,  was not being output to screen after recent switch from php short_open_tags to full. `<?= to <?php echo`
+* fixed service location map widget output,  was not being output to screen after recent switch from php short_open_tags to full. `<?= to <?php echo`.
 
 = 1.1 =
 * added staff member listings to allow for doctor/therapist pages.
 * added staff type/role taxonomy for grouping staff into roles. Eg: Doctor, Therapist.
 * added staff member multi relation to services. Allows you to show doctors that provide the service.
 * some minor fixes for Wordpress 4.2+
+
+= 1.1.1 =
+* Restored the disclaimer on/off toggle option in settings
+* Added shortcode `mjm-clinic-disclaimer`
+* Tested on Wordpress 4.3+
